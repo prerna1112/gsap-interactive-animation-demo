@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A GSAP and ScrollTrigger capability demo for smooth, responsive product animation." />
+  <title>Signal Motion — GSAP capability demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="progress-track" aria-hidden="true"><span id="scroll-progress"></span></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Signal Motion home"><span class="brand-mark">+</span><span>signal motion</span></a>
+    <div class="header-meta"><span class="status-dot"></span><span>prototype / 01</span></div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">GSAP + ScrollTrigger / interaction study</p>
+        <h1 class="hero-title"><span class="title-line">Make the</span><span class="title-line title-accent">signal move.</span></h1>
+        <p class="hero-lede reveal">A small, performance-minded dashboard study showing how scroll position can choreograph data, hierarchy, and attention.</p>
+        <a class="hero-cta reveal" href="#story"><span>Explore the sequence</span><span class="cta-arrow">↘</span></a>
+      </div>
+      <div class="hero-art" aria-label="Animated signal visualization">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="signal-card">
+          <div class="signal-card-top"><span>LIVE SIGNAL</span><span class="mono">09:41:18</span></div>
+          <div class="signal-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="signal-card-bottom"><strong>+24.8%</strong><span>conversion lift</span></div>
+        </div>
+        <div class="hero-note mono">SCROLL TO COMPOSE →</div>
+      </div>
+    </section>
+
+    <section id="story" class="story section-shell">
+      <div class="section-intro reveal"><p class="eyebrow">01 / THE READ</p><h2>Clarity, with a little momentum.</h2><p>Every reveal has a job: orient the eye, make change legible, and keep the next action obvious.</p></div>
+      <div class="metrics-grid" aria-label="Key metrics">
+        <article class="metric-card metric-featured"><span class="metric-index mono">A</span><p class="metric-label">signal quality</p><strong class="metric-value" data-value="98">0</strong><span class="metric-unit">/ 100</span><div class="metric-bar"><span></span></div></article>
+        <article class="metric-card"><span class="metric-index mono">B</span><p class="metric-label">response time</p><strong class="metric-value" data-value="184">0</strong><span class="metric-unit">ms median</span><div class="metric-bar"><span></span></div></article>
+        <article class="metric-card"><span class="metric-index mono">C</span><p class="metric-label">active flows</p><strong class="metric-value" data-value="12">0</strong><span class="metric-unit">running</span><div class="metric-bar"><span></span></div></article>
+      </div>
+    </section>
+
+    <section class="chart-section section-shell">
+      <div class="chart-copy reveal"><p class="eyebrow">02 / THE LIFT</p><h2>Patterns become persuasive when motion has rhythm.</h2><p>ScrollTrigger pins the story briefly, then releases it. The animation only uses transform and opacity so the layout stays calm on smaller screens.</p><button class="ghost-button" id="pulse-button" type="button">Pulse the data <span>↗</span></button><p class="button-feedback" id="pulse-feedback" role="status" aria-live="polite"></p></div>
+      <div class="chart-frame" aria-label="Animated 7-day signal chart">
+        <div class="chart-header"><span class="mono">SIGNAL / 7 DAYS</span><span class="chart-change">+18.2% <span>↗</span></span></div>
+        <div class="chart-grid"><span></span><span></span><span></span><span></span></div>
+        <svg class="chart-svg" viewBox="0 0 640 250" role="img" aria-label="Line chart rising from 32 to 86">
+          <defs><linearGradient id="area-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c7ff4a" stop-opacity=".24"/><stop offset="1" stop-color="#c7ff4a" stop-opacity="0"/></linearGradient></defs>
+          <path class="chart-area" d="M12 218 C70 190 76 175 135 185 S195 155 240 162 S300 130 340 145 S392 102 430 118 S480 72 520 96 S570 55 628 32 L628 230 L12 230 Z"/>
+          <path class="chart-line" d="M12 218 C70 190 76 175 135 185 S195 155 240 162 S300 130 340 145 S392 102 430 118 S480 72 520 96 S570 55 628 32"/>
+          <g class="chart-points"><circle cx="12" cy="218" r="4"/><circle cx="135" cy="185" r="4"/><circle cx="240" cy="162" r="4"/><circle cx="340" cy="145" r="4"/><circle cx="430" cy="118" r="4"/><circle cx="520" cy="96" r="4"/><circle cx="628" cy="32" r="5"/></g>
+        </svg>
+        <div class="chart-labels mono"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div>
+      </div>
+    </section>
+
+    <section class="sequence section-shell">
+      <div class="sequence-heading reveal"><p class="eyebrow">03 / THE HANDOFF</p><h2>Useful motion ends with a clear next step.</h2></div>
+      <div class="sequence-panel"><div class="sequence-marker"><span class="marker-ring"></span><span class="mono">READY</span></div><div><p class="sequence-title">Turn the insight into an action.</p><p class="sequence-text">The same timeline can guide onboarding, product tours, and conversion moments—without turning the interface into a distraction.</p></div><a class="sequence-link" href="#top">Back to top <span>↑</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer section-shell"><span>Built as an application-specific prototype.</span><span class="mono">HTML / CSS / GSAP</span></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
