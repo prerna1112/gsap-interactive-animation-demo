@@ -6,6 +6,8 @@ An application-specific prototype demonstrating a smooth, responsive scroll narr
 
 https://gsap-interactive-animation-demo.vercel.app
 
+Case study: [docs/signal-motion-gsap-case-study.pdf](docs/signal-motion-gsap-case-study.pdf)
+
 ## What it demonstrates
 
 - ScrollTrigger progress rail, hero parallax, and one-time progressive reveals.
